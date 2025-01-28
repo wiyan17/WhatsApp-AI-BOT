@@ -132,4 +132,3 @@ Distributed under MIT License. Lihat `LICENSE` untuk detail.
   <a href="https://github.com/wiyan17">GitHub</a> | 
   <a href="https://www.linkedin.com/in/widhi-harliyanto">LinkedIn</a>
 </div>
-```
