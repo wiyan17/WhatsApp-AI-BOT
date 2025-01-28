@@ -1,3 +1,4 @@
+```markdown
 # 🤖 WhatsApp AI Chat Bot
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -31,3 +32,104 @@ git clone https://github.com/yourusername/whatsapp-deepseek-bot.git
 cd whatsapp-deepseek-bot
 npm install
 cp .env.example .env
+```
+
+### Konfigurasi
+Isi `.env` dengan credential Anda:
+```env
+DEEPSEEK_API_KEY=your_api_key_here
+```
+
+### Menjalankan Bot
+```bash
+npm start
+```
+
+### Menggunakan Docker
+```bash
+docker-compose up -d --build
+```
+
+## 🧠 Konfigurasi AI
+Edit `src/ai.js` untuk menyesuaikan parameter model:
+```javascript
+const payload = {
+  model: "deepseek-chat", // Ganti model yang diinginkan
+  messages: [...],
+  temperature: 0.7, // 0-2 (kreativitas)
+  max_tokens: 1000 // Panjang maksimal respons
+};
+```
+
+## 🗂 Struktur Proyek
+```
+whatsapp-deepseek-bot/
+├── src/              # Source code utama
+│   ├── bot.js        # Logic utama bot
+│   ├── ai.js         # Integrasi AI
+│   └── config.js     # Konfigurasi
+├── sessions/         # Session storage
+├── .env              # Environment variables
+├── docker-compose.yml# Docker configuration
+└── package.json      # Dependencies
+```
+
+## 🔧 Customisasi
+### Menambahkan Command Baru
+```javascript
+// Di src/bot.js
+client.on('message', async msg => {
+  if (msg.body === '!ping') {
+    await msg.reply('Pong! 🏓');
+  }
+});
+```
+
+### Menggunakan OpenAI
+1. Ganti endpoint di `src/ai.js`:
+```javascript
+this.endpoint = 'https://api.openai.com/v1/chat/completions';
+```
+2. Update payload:
+```javascript
+payload.model = 'gpt-3.5-turbo';
+```
+
+## 🚨 Troubleshooting
+**QR Code Tidak Muncul:**
+- Pastikan Chromium terinstall
+- Coba jalankan dengan `PUPPETEER_EXECUTABLE_PATH` di `.env`
+
+**Error Session:**
+- Hapus folder `sessions`
+- Restart bot
+
+**API Error:**
+- Periksa API key
+- Verifikasi kuota API
+
+**Docker Issues:**
+- Pastikan Docker service running
+- Coba rebuild image: `docker-compose build --no-cache`
+
+## ⚠️ Disclaimer
+Proyek ini dibuat untuk tujuan edukasi. Penggunaan WhatsApp API tidak resmi mungkin melanggar terms of service. Gunakan dengan resiko sendiri.
+
+## 🤝 Berkontribusi
+1. Fork repository
+2. Buat branch fitur (`git checkout -b feature/AmazingFeature`)
+3. Commit perubahan (`git commit -m 'Add some AmazingFeature'`)
+4. Push ke branch (`git push origin feature/AmazingFeature`)
+5. Buka Pull Request
+
+## 📄 Lisensi
+Distributed under MIT License. Lihat `LICENSE` untuk detail.
+
+---
+
+<div align="center">
+  Made with ❤️ by Widhi Harliyanto| 
+  <a href="https://github.com/wiyan17">GitHub</a> | 
+  <a href="Widhi Harliyanto">LinkedIn</a>
+</div>
+```
