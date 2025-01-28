@@ -1,4 +1,3 @@
-
 ```markdown
 # 🤖 WhatsApp AI Chat Bot
 
@@ -129,8 +128,8 @@ Distributed under MIT License. Lihat `LICENSE` untuk detail.
 ---
 
 <div align="center">
-  Made with ❤️ by Your Name | 
-  <a href="https://github.com/yourusername">GitHub</a> | 
-  <a href="https://linkedin.com/in/yourprofile">LinkedIn</a>
+  Made with ❤️ by Widhi Harliyanto| 
+  <a href="https://github.com/wiyan17">GitHub</a> | 
+  <a href="https://www.linkedin.com/in/widhi-harliyanto">LinkedIn</a>
 </div>
 ```
