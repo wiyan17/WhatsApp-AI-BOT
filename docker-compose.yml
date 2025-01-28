@@ -1,0 +1,9 @@
+version: '3'
+services:
+  whatsapp-bot:
+    build: .
+    restart: unless-stopped
+    volumes:
+      - ./sessions:/app/sessions
+    environment:
+      - DEEPSEEK_API_KEY=${DEEPSEEK_API_KEY}
