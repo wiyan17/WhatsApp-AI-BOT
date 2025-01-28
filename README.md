@@ -32,7 +32,7 @@ git clone https://github.com/yourusername/whatsapp-deepseek-bot.git
 cd whatsapp-deepseek-bot
 npm install
 cp .env.example .env
-```
+
 
 ### Konfigurasi
 Isi `.env` dengan credential Anda:
@@ -132,4 +132,3 @@ Distributed under MIT License. Lihat `LICENSE` untuk detail.
   <a href="https://github.com/wiyan17">GitHub</a> | 
   <a href="Widhi Harliyanto">LinkedIn</a>
 </div>
-```
